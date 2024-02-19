@@ -1,5 +1,9 @@
-<h1>Welcome to app-component</h1>
+<h1>{{ title | uppercase}}</h1>
 
-<hr>
+<h3>Today: {{ today | date: 'dd/MM/yyyy' }}</h3>
 
-<app-details></app-details>
+<img  [src]="imageUrl" [width]="imageWidth"/>
+
+<span>
+  Selling Price {{sellingPrice |  currency }}, profit: {{sellingPrice | profit: 10 | currency}}
+</span>
