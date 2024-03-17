@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  movieTitle = "Example movie"
-  constructor() { }
+  movieTitle = ""
+  constructor(private _activatedRoute: ActivatedRoute) {
+    this._activatedRoute.params.subscribe((params) => {
+      this.movieTitle = params["movieTitle"];
+    })
+   }
 
   ngOnInit(): void {
   }

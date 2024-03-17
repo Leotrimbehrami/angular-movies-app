@@ -63,7 +63,9 @@
   </div>
 
   <div class="text-center">
-    <a class="btn btn-warning">View all Actors</a>
+    <a class="btn btn-warning" [routerLink]="['/details/actors/'+movieId]"
+      >View more</a
+    >
   </div>
 </div>
 <hr />
@@ -78,7 +80,9 @@
   </div>
 
   <div class="text-center">
-    <a class="btn btn-warning">View all reviews</a>
+    <a class="btn btn-warning" [routerLink]="['/details/reviews/'+movieId]"
+      >View more</a
+    >
   </div>
 </div>
 
@@ -92,6 +96,10 @@
   <div class="col-md-12 text-center">
     <app-details-movies></app-details-movies>
   </div>
+</div>
+
+<div class="text-center">
+  <a class="btn btn-warning" [routerLink]="['/details/movies/'+movieId]">View more</a>
 </div>
 
 <br />
